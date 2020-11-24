@@ -18,7 +18,7 @@ System.out.println(query);
 //LOAD THE JDBC DRIVER CLASS (OPTIONAL ) ONLY FOR WORKING WITH OLD VERSIONS
 Class.forName("oracle.jdbc.driver.OracleDriver");
 //ESTABLISH THE CONNECTION
-Connection con=DriverManager.getConnection("jdbc:oracle:thin:1521:ORCL","scott","tiger");
+Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL","scott","tiger");
 Statement st=con.createStatement();
 ResultSet rs=st.executeQuery(query);
 if(rs.next()==true)
